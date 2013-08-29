@@ -24,9 +24,12 @@ lib/Spreadsheet/Template/Writer/Excel.pm
 lib/Spreadsheet/Template/Writer/XLSX.pm
 t/00-compile.t
 t/basic.t
+t/cell-to-row-col.t
 t/data/Test.json
 t/data/Test.xlsx
+t/data/merge.json
 t/data/template.json
+t/merge.t
 t/template.t
 xt/release/eol.t
 xt/release/no-tabs.t

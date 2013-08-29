@@ -3,7 +3,7 @@ BEGIN {
   $Spreadsheet::Template::Processor::AUTHORITY = 'cpan:DOY';
 }
 {
-  $Spreadsheet::Template::Processor::VERSION = '0.01';
+  $Spreadsheet::Template::Processor::VERSION = '0.02';
 }
 use Moose::Role;
 # ABSTRACT: role for classes which preprocess a template file before rendering
@@ -26,7 +26,7 @@ Spreadsheet::Template::Processor - role for classes which preprocess a template 
 
 =head1 VERSION
 
-version 0.01
+version 0.02
 
 =head1 SYNOPSIS
 

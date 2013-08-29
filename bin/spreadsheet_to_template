@@ -20,7 +20,7 @@ spreadsheet_to_template - create a basic template file from a spreadsheet
 
 =head1 VERSION
 
-version 0.01
+version 0.02
 
 =head1 AUTHOR
 

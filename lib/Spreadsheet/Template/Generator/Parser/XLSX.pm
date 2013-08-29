@@ -3,7 +3,7 @@ BEGIN {
   $Spreadsheet::Template::Generator::Parser::XLSX::AUTHORITY = 'cpan:DOY';
 }
 {
-  $Spreadsheet::Template::Generator::Parser::XLSX::VERSION = '0.01';
+  $Spreadsheet::Template::Generator::Parser::XLSX::VERSION = '0.02';
 }
 use Moose;
 # ABSTRACT: parser for XLSX files
@@ -36,7 +36,7 @@ Spreadsheet::Template::Generator::Parser::XLSX - parser for XLSX files
 
 =head1 VERSION
 
-version 0.01
+version 0.02
 
 =head1 SYNOPSIS
 

@@ -3,7 +3,7 @@ BEGIN {
   $Spreadsheet::Template::Generator::Parser::Excel::AUTHORITY = 'cpan:DOY';
 }
 {
-  $Spreadsheet::Template::Generator::Parser::Excel::VERSION = '0.01';
+  $Spreadsheet::Template::Generator::Parser::Excel::VERSION = '0.02';
 }
 use Moose::Role;
 

@@ -3,7 +3,7 @@ BEGIN {
   $Spreadsheet::Template::Writer::XLSX::AUTHORITY = 'cpan:DOY';
 }
 {
-  $Spreadsheet::Template::Writer::XLSX::VERSION = '0.01';
+  $Spreadsheet::Template::Writer::XLSX::VERSION = '0.02';
 }
 use Moose;
 # ABSTRACT: generate XLSX files from templates
@@ -31,7 +31,7 @@ Spreadsheet::Template::Writer::XLSX - generate XLSX files from templates
 
 =head1 VERSION
 
-version 0.01
+version 0.02
 
 =head1 SYNOPSIS
 

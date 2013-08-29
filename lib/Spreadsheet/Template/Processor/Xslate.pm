@@ -3,7 +3,7 @@ BEGIN {
   $Spreadsheet::Template::Processor::Xslate::AUTHORITY = 'cpan:DOY';
 }
 {
-  $Spreadsheet::Template::Processor::Xslate::VERSION = '0.01';
+  $Spreadsheet::Template::Processor::Xslate::VERSION = '0.02';
 }
 use Moose;
 # ABSTRACT: preprocess templates with Xslate
@@ -56,7 +56,7 @@ Spreadsheet::Template::Processor::Xslate - preprocess templates with Xslate
 
 =head1 VERSION
 
-version 0.01
+version 0.02
 
 =head1 SYNOPSIS
 
@@ -90,6 +90,15 @@ or a hashref of format options, C<$type> is either C<"string">, C<"number">, or
 C<"date_time">, and C<%args> contains any other parameters (such as C<formula>,
 for instance) to declare for the cell. C<$type> is optional, and if not passed,
 defaults to C<"string">.
+
+=item merge($range, $content, $format, $type, %args)
+
+Returns representation of a range of cells to be merged. C<$content>,
+C<$format>, C<$type>, and C<%args> are identical to the parameters listed above
+for the C<c> helper, and C<$range> describes the range of cells to be merged.
+The range can be specified either by an array of two arrays corresponding to
+the row and column indices of the top left and bottom right cell, or by an
+Excel-style range (like C<A1:C3>).
 
 =item true
 

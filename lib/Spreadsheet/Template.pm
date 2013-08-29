@@ -3,7 +3,7 @@ BEGIN {
   $Spreadsheet::Template::AUTHORITY = 'cpan:DOY';
 }
 {
-  $Spreadsheet::Template::VERSION = '0.01';
+  $Spreadsheet::Template::VERSION = '0.02';
 }
 use Moose;
 # ABSTRACT: generate spreadsheets from a template
@@ -86,7 +86,7 @@ Spreadsheet::Template - generate spreadsheets from a template
 
 =head1 VERSION
 
-version 0.01
+version 0.02
 
 =head1 SYNOPSIS
 
@@ -157,6 +157,9 @@ been preprocessed is a JSON file, with a structure that looks like this:
            "name"          : "Sheet1",
            "row_heights"   : [ 18, 18, 18 ],
            "selection"     : [ 0, 0 ],
+           "autofilter"    : [
+               [ [0, 0], [0, 2] ]
+           ],
            "cells"         : [
               [
                  {
@@ -216,6 +219,16 @@ been preprocessed is a JSON file, with a structure that looks like this:
                     "type"     : "string"
                  }
               ]
+           ],
+           "merge" : [
+              {
+                  "range"    : [ [1, 0], [1, 2] ],
+                  "contents" : "Merged Contents",
+                  "format"   : {
+                      "color" : "#000000"
+                  },
+                  "type"     : "string"
+              }
            ]
         }
      ]
@@ -265,10 +278,23 @@ spreadsheet.
 An array of two numbers corresponding to the (zero-based) row and column of the
 cell that should be selected when the worksheet is first displayed.
 
+=item autofilter
+
+Enables autofilter behavior for each range of cells listed. Cell ranges are
+specified by an array of two arrays of two numbers, corresponding to the row
+and column of the top left and bottom right cell of the autofiltered range.
+
 =item cells
 
 An array of arrays of cell objects. Each innermost array represents a row,
 containing all of the cell data for that row.
+
+=item merge
+
+An array of merge objects. Merge objects are identical to cell objects, except
+that they contain an additional C<range> key, which has a value of an array of
+two arrays of two numbers, corresponding to the row and column of the top left
+and bottom right cell of the range to be merged.
 
 =back
 

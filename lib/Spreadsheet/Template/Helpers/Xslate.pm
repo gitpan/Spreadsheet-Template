@@ -3,7 +3,7 @@ BEGIN {
   $Spreadsheet::Template::Helpers::Xslate::AUTHORITY = 'cpan:DOY';
 }
 {
-  $Spreadsheet::Template::Helpers::Xslate::VERSION = '0.01';
+  $Spreadsheet::Template::Helpers::Xslate::VERSION = '0.02';
 }
 use strict;
 use warnings;
@@ -16,10 +16,10 @@ use Sub::Exporter 'build_exporter';
 
 my $import = build_exporter({
     exports => [
-        map { $_ => \&_curry_package } qw(format c true false)
+        map { $_ => \&_curry_package } qw(format c merge true false)
     ],
     groups => {
-        default => [qw(format c true false)],
+        default => [qw(format c merge true false)],
     },
 });
 
@@ -52,8 +52,49 @@ sub c {
     });
 }
 
+sub merge {
+    my ($package, $range, $contents, $format, $type, %args) = @_;
+
+    $type = 'string' unless defined $type;
+
+    return $JSON->encode({
+        range    => _parse_range($range),
+        contents => "$contents",
+        format   => _formats($package, $format),
+        type     => $type,
+        (defined $args{formula}
+            ? (formula => $args{formula})
+            : ()),
+    });
+}
+
 sub true  { JSON::true  }
 sub false { JSON::false }
+
+sub _parse_range {
+    my ($range) = @_;
+
+    $range = [ split ':', $range ]
+        if !ref($range);
+
+    return [ map { _cell_to_row_col($_) } @$range ]
+}
+
+sub _cell_to_row_col {
+    my ($cell) = @_;
+
+    return $cell if ref($cell) eq 'ARRAY';
+
+    my ($col, $row) = $cell =~ /([A-Z]+)([0-9]+)/;
+
+    my $ncol = 0;
+    for my $char (split //, $col) {
+        $ncol *= 26;
+        $ncol += ord($char) - ord('A') + 1;
+    }
+
+    return [ $row - 1, $ncol - 1 ];
+}
 
 sub _formats {
     my ($package, $format) = @_;
@@ -72,6 +113,7 @@ sub _curry_package {
 
  format
  c
+ merge
  true
  false
 

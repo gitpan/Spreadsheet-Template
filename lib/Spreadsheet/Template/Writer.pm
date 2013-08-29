@@ -3,7 +3,7 @@ BEGIN {
   $Spreadsheet::Template::Writer::AUTHORITY = 'cpan:DOY';
 }
 {
-  $Spreadsheet::Template::Writer::VERSION = '0.01';
+  $Spreadsheet::Template::Writer::VERSION = '0.02';
 }
 use Moose::Role;
 # ABSTRACT: role for classes which write spreadsheet files from a template
@@ -26,7 +26,7 @@ Spreadsheet::Template::Writer - role for classes which write spreadsheet files f
 
 =head1 VERSION
 
-version 0.01
+version 0.02
 
 =head1 SYNOPSIS
 
