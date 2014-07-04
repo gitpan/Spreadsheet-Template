@@ -2,9 +2,7 @@ package Spreadsheet::Template::Writer::XLSX;
 BEGIN {
   $Spreadsheet::Template::Writer::XLSX::AUTHORITY = 'cpan:DOY';
 }
-{
-  $Spreadsheet::Template::Writer::XLSX::VERSION = '0.02';
-}
+$Spreadsheet::Template::Writer::XLSX::VERSION = '0.03';
 use Moose;
 # ABSTRACT: generate XLSX files from templates
 
@@ -25,13 +23,15 @@ __END__
 
 =pod
 
+=encoding UTF-8
+
 =head1 NAME
 
 Spreadsheet::Template::Writer::XLSX - generate XLSX files from templates
 
 =head1 VERSION
 
-version 0.02
+version 0.03
 
 =head1 SYNOPSIS
 
@@ -52,7 +52,7 @@ Jesse Luehrs <doy@tozt.net>
 
 =head1 COPYRIGHT AND LICENSE
 
-This software is Copyright (c) 2013 by Jesse Luehrs.
+This software is Copyright (c) 2014 by Jesse Luehrs.
 
 This is free software, licensed under:
 

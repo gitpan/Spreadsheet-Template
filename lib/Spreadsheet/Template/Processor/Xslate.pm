@@ -2,9 +2,7 @@ package Spreadsheet::Template::Processor::Xslate;
 BEGIN {
   $Spreadsheet::Template::Processor::Xslate::AUTHORITY = 'cpan:DOY';
 }
-{
-  $Spreadsheet::Template::Processor::Xslate::VERSION = '0.02';
-}
+$Spreadsheet::Template::Processor::Xslate::VERSION = '0.03';
 use Moose;
 # ABSTRACT: preprocess templates with Xslate
 
@@ -50,13 +48,15 @@ __END__
 
 =pod
 
+=encoding UTF-8
+
 =head1 NAME
 
 Spreadsheet::Template::Processor::Xslate - preprocess templates with Xslate
 
 =head1 VERSION
 
-version 0.02
+version 0.03
 
 =head1 SYNOPSIS
 
@@ -124,7 +124,7 @@ Jesse Luehrs <doy@tozt.net>
 
 =head1 COPYRIGHT AND LICENSE
 
-This software is Copyright (c) 2013 by Jesse Luehrs.
+This software is Copyright (c) 2014 by Jesse Luehrs.
 
 This is free software, licensed under:
 

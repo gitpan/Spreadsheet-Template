@@ -1,5 +1,10 @@
 Revision history for Spreadsheet-Template
 
+0.03  2014-07-04
+      - fix default color handling to line up with changes in
+        Spreadsheet::ParseExcel and Spreadsheet::ParseXLSX (edibleenergy, #3,
+        #4)
+
 0.02  2013-08-29
       - add 'merge' and 'autofilter' options to the template format
         (jasonshaev, #1)

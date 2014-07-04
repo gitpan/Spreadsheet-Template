@@ -2,9 +2,7 @@ package Spreadsheet::Template::Writer::Excel;
 BEGIN {
   $Spreadsheet::Template::Writer::Excel::AUTHORITY = 'cpan:DOY';
 }
-{
-  $Spreadsheet::Template::Writer::Excel::VERSION = '0.02';
-}
+$Spreadsheet::Template::Writer::Excel::VERSION = '0.03';
 use Moose::Role;
 
 use Class::Load 'load_class';
@@ -291,6 +289,8 @@ sub _munge_format {
 sub _color {
     my $self = shift;
     my ($color) = @_;
+
+    return 64 if !defined($color);
 
     if (exists $self->_colors->{$color}) {
         return $self->_colors->{$color};

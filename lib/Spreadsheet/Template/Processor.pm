@@ -2,9 +2,7 @@ package Spreadsheet::Template::Processor;
 BEGIN {
   $Spreadsheet::Template::Processor::AUTHORITY = 'cpan:DOY';
 }
-{
-  $Spreadsheet::Template::Processor::VERSION = '0.02';
-}
+$Spreadsheet::Template::Processor::VERSION = '0.03';
 use Moose::Role;
 # ABSTRACT: role for classes which preprocess a template file before rendering
 
@@ -20,13 +18,15 @@ __END__
 
 =pod
 
+=encoding UTF-8
+
 =head1 NAME
 
 Spreadsheet::Template::Processor - role for classes which preprocess a template file before rendering
 
 =head1 VERSION
 
-version 0.02
+version 0.03
 
 =head1 SYNOPSIS
 
@@ -59,7 +59,7 @@ Jesse Luehrs <doy@tozt.net>
 
 =head1 COPYRIGHT AND LICENSE
 
-This software is Copyright (c) 2013 by Jesse Luehrs.
+This software is Copyright (c) 2014 by Jesse Luehrs.
 
 This is free software, licensed under:
 

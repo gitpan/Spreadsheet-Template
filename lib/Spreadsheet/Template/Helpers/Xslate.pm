@@ -2,9 +2,7 @@ package Spreadsheet::Template::Helpers::Xslate;
 BEGIN {
   $Spreadsheet::Template::Helpers::Xslate::AUTHORITY = 'cpan:DOY';
 }
-{
-  $Spreadsheet::Template::Helpers::Xslate::VERSION = '0.02';
-}
+$Spreadsheet::Template::Helpers::Xslate::VERSION = '0.03';
 use strict;
 use warnings;
 
