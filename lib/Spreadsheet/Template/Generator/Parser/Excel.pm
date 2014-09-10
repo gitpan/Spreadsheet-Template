@@ -2,7 +2,7 @@ package Spreadsheet::Template::Generator::Parser::Excel;
 BEGIN {
   $Spreadsheet::Template::Generator::Parser::Excel::AUTHORITY = 'cpan:DOY';
 }
-$Spreadsheet::Template::Generator::Parser::Excel::VERSION = '0.03';
+$Spreadsheet::Template::Generator::Parser::Excel::VERSION = '0.04';
 use Moose::Role;
 
 use DateTime::Format::Excel;

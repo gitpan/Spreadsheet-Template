@@ -2,7 +2,7 @@ package Spreadsheet::Template::Processor::Identity;
 BEGIN {
   $Spreadsheet::Template::Processor::Identity::AUTHORITY = 'cpan:DOY';
 }
-$Spreadsheet::Template::Processor::Identity::VERSION = '0.03';
+$Spreadsheet::Template::Processor::Identity::VERSION = '0.04';
 use Moose;
 # ABSTRACT: render a template file with no processing at all
 
@@ -33,7 +33,7 @@ Spreadsheet::Template::Processor::Identity - render a template file with no proc
 
 =head1 VERSION
 
-version 0.03
+version 0.04
 
 =head1 SYNOPSIS
 

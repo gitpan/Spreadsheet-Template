@@ -2,7 +2,7 @@ package Spreadsheet::Template::Generator::Parser;
 BEGIN {
   $Spreadsheet::Template::Generator::Parser::AUTHORITY = 'cpan:DOY';
 }
-$Spreadsheet::Template::Generator::Parser::VERSION = '0.03';
+$Spreadsheet::Template::Generator::Parser::VERSION = '0.04';
 use Moose::Role;
 # ABSTRACT: role for classes which parse an existing spreadsheet
 
@@ -26,7 +26,7 @@ Spreadsheet::Template::Generator::Parser - role for classes which parse an exist
 
 =head1 VERSION
 
-version 0.03
+version 0.04
 
 =head1 SYNOPSIS
 

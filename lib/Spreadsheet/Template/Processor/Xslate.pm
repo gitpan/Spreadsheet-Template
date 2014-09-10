@@ -2,7 +2,7 @@ package Spreadsheet::Template::Processor::Xslate;
 BEGIN {
   $Spreadsheet::Template::Processor::Xslate::AUTHORITY = 'cpan:DOY';
 }
-$Spreadsheet::Template::Processor::Xslate::VERSION = '0.03';
+$Spreadsheet::Template::Processor::Xslate::VERSION = '0.04';
 use Moose;
 # ABSTRACT: preprocess templates with Xslate
 
@@ -56,7 +56,7 @@ Spreadsheet::Template::Processor::Xslate - preprocess templates with Xslate
 
 =head1 VERSION
 
-version 0.03
+version 0.04
 
 =head1 SYNOPSIS
 

@@ -2,7 +2,7 @@ package Spreadsheet::Template::Generator;
 BEGIN {
   $Spreadsheet::Template::Generator::AUTHORITY = 'cpan:DOY';
 }
-$Spreadsheet::Template::Generator::VERSION = '0.03';
+$Spreadsheet::Template::Generator::VERSION = '0.04';
 use Moose;
 # ABSTRACT: create new templates from existing spreadsheets
 
@@ -63,7 +63,7 @@ Spreadsheet::Template::Generator - create new templates from existing spreadshee
 
 =head1 VERSION
 
-version 0.03
+version 0.04
 
 =head1 SYNOPSIS
 
